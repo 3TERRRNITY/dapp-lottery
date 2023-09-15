@@ -1,10 +1,18 @@
 "use client";
-import { styled } from "styled-components";
-export default function Home() {
-  const MainPage = styled.div`
-    background-color: aquamarine;
-    height: 300px;
-    width: 300px;
-  `;
-  return <MainPage>RAP</MainPage>;
-}
+import React from "react";
+import { ThemeProvider } from "styled-components";
+
+import { MenuList, MenuListItem, Separator, styleReset } from "react95";
+
+import original from "react95/dist/themes/original";
+import { Header } from "../components/Header/Header";
+
+const Page = () => (
+  <div>
+    <ThemeProvider theme={original}>
+      <Header />
+    </ThemeProvider>
+  </div>
+);
+
+export default Page;
